@@ -1,0 +1,153 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  font-size: 15px;
+}
+
+:root {
+  --inter: "Inter", sans-serif;
+  --lexend-deca: "Lexend Deca", sans-serif;
+  --main-background: hsl(233, 47%, 7%);
+  --card-background: hsl(244, 38%, 16%);
+  --accent: hsl(277, 64%, 61%);
+  --main-heading: hsl(0, 0%, 100%);
+  --main-paragraph: hsla(0, 0%, 100%, 0.75);
+  --stats-heading: hsla(0, 0%, 100%, 0.6);
+}
+body {
+  background-color: var(--main-background);
+}
+
+.card {
+  background-color: var(--card-background);
+  width: 250px;
+  margin: 0 auto;
+  transform: translateY(5%);
+  border-radius: 5px;
+}
+
+
+.image .image1 {
+  width: 16.6em;
+  object-fit: contain;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+ 
+}
+
+.image2 {
+  display: none;
+}
+
+.main-content .head {
+  color: var(--main-heading);
+  text-align: center;
+  padding-top: 1em;
+  padding-bottom: 0.5em;
+  font-size: 1.5rem;
+  font-family: var(--inter);
+  font-weight: 600;
+  padding-inline: 0.6em;
+}
+
+.main-content span {
+  color: var(--accent);
+  font-size: 1em;
+}
+
+.main-content .main-paragraph {
+  text-align: center;
+  padding-inline: 1.5em;
+  font-family: var(--inter);
+  line-height: 1.5em;
+  opacity: 0.8;
+  font-weight: 400;
+
+  font-size: 12px;
+  color: var(--main-paragraph);
+}
+
+.main-content .stats {
+  text-align: center;
+}
+
+.stats h2 {
+  color: var(--main-heading);
+  font-family: var(--inter);
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 1.5em;
+}
+
+.stats p {
+  color: var(--stats-heading);
+  font-size: 0.65rem;
+  font-family: var(--lexend-deca);
+  font-weight: 400;
+  opacity: 0.7;
+}
+
+.first-padds {
+  margin-top: 2em;
+}
+
+.padds {
+  margin-top: 1.5em;
+}
+.stats:last-child {
+  padding-bottom: 1.5em;
+}
+
+@media (min-width: 900px) {
+  .image2 {
+    width: 30em;
+    display: block;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+
+  .image1 {
+    display: none;
+  }
+
+  .card {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 60em;
+    border-radius: 5px;
+    transform: translateY(50%);
+    overflow: hidden;
+  }
+
+  .main-content {
+    margin-top: 2em;
+  }
+
+  .main-content .head {
+    padding-left: 2.5em;
+    padding-right: 2.5em;
+    text-align: start;
+    line-height: 1.5em;
+    font-size: 1.7rem;
+  }
+
+  .main-content .main-paragraph {
+    text-align: start;
+    padding-left: 5em;
+    padding-top: 1em;
+    width: 25em;
+    line-height: 1.8em;
+  }
+
+  .main-content .stats {
+    display: inline-block;
+    padding-left: 3em;
+    padding-top: 2em;
+  }
+
+  .stats p {
+    text-indent: 2em;
+  }
+}
